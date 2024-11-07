@@ -343,7 +343,7 @@ namespace KdyWeb.Service.FileStore
             //自建tg图床 https://pro-img.kdy666.com/upload
             var tgImgHost = "https://pro-img.kdy666.com";
             var normalInput = new NormalFileInput($"{tgImgHost}/upload", "file",
-                "[0].src", kdyFileInput.FileName)
+                "src", kdyFileInput.FileName)
             {
                 BaseHost = tgImgHost
             };
