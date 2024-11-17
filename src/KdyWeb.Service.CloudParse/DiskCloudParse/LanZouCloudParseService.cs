@@ -125,10 +125,10 @@ namespace KdyWeb.Service.CloudParse.DiskCloudParse
                 .ToString()
                 .ToAesHexExt(AesKey)
                 .ToLower();
-            var reqUrl = $"/proved/record/file/list?uuid={userInfo.DevCode}&devType=6&devCode={userInfo.DevCode}&devModel=chrome&devVersion=129&appVersion=&timestamp={timestamp}&appToken={userInfo.AppToken}&extra=2&offset={input.Page}&limit={input.PageSize}&folderId={input.InputId}&type=0";
+            var reqUrl = $"/proved/record/file/list?uuid={userInfo.DevCode}&devType=6&devCode={userInfo.DevCode}&devModel=chrome&devVersion=129&appVersion=&timestamp={timestamp}&appToken={userInfo.AppToken}&extra=2&offset={input.Page}&limit={input.PageSize}&folderId={input.InputId}&type=0&rule=1&sort=0";
             if (input.KeyWord.IsEmptyExt() == false)
             {
-                reqUrl = $"/proved/record/search/list?uuid={userInfo.DevCode}&devType=6&devCode={userInfo.DevCode}&devModel=chrome&devVersion=129&appVersion=&timestamp={timestamp}&appToken={userInfo.AppToken}&extra=2&offset=1&limit=60&search={input.KeyWord}&folderId=0&type=0";
+                reqUrl = $"/proved/record/search/list?uuid={userInfo.DevCode}&devType=6&devCode={userInfo.DevCode}&devModel=chrome&devVersion=129&appVersion=&timestamp={timestamp}&appToken={userInfo.AppToken}&extra=2&offset=1&limit=60&search={input.KeyWord}&folderId=0&type=0&rule=1&sort=0";
             }
 
             KdyRequestCommonInput.SetGetRequest(reqUrl);
