@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Logging;
 
 namespace KdyWeb.CloudParse.SelfHost
 {
@@ -21,6 +22,9 @@ namespace KdyWeb.CloudParse.SelfHost
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // 启用 PII
+            IdentityModelEventSource.ShowPII = true;
+
             //自定义模型校验
             services.AddControllersWithViews(options => { options.Filters.Add<ModelStateValidFilter>(); });
 

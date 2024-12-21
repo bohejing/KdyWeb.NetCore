@@ -10,6 +10,7 @@ using KdyWeb.IService.Selenium;
 using KdyWeb.Service.Selenium;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
+using Microsoft.IdentityModel.Logging;
 
 namespace KdyWeb.CloudParseApi
 {
@@ -25,6 +26,9 @@ namespace KdyWeb.CloudParseApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // ∆Ù”√ PII
+            IdentityModelEventSource.ShowPII = true;
+
             services.AddTransient<ISeleniumLoginService, SeleniumLoginService>();
             services.AddTransient<ILoginByQrService, LoginByQrService>();
             services.AddKdyDefaultExt(Configuration);
