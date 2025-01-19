@@ -198,6 +198,11 @@
             /// 百家号cookie
             /// </summary>
             public const string UploadConfigBjhDocCookie = "UploadConfig:bjh_cookie";
+
+            /// <summary>
+            /// 语雀cookie
+            /// </summary>
+            public const string UploadConfigYuQueCookie = "UploadConfig:yuque_cookie";
         }
     }
 

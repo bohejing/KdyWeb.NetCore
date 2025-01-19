@@ -14,5 +14,10 @@
         /// 伪防盗代理Host
         /// </summary>
         public string ProxyHost { get; set; }
+
+        /// <summary>
+        /// Cdn伪防盗代理Host
+        /// </summary>
+        public string CdnProxyHost { get; set; }
     }
 }
